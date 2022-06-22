@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+a,
+li {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+
+.header-container {
+  box-sizing: border-box;
+  width: 1349px;
+  height: auto;
+}
+
+.container {
+  align-items: center;
+
+  max-width: 1320px;
+  height: 124px;
+
+  padding: 0 36px;
+  margin: 0 14.5px;
+}
+.container {
+  display: grid;
+  grid-template-areas:
+    'left center right'
+    'bottom bottom bottom';
+}
+
+.menu-box,
+.acesso-box {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  align-items: center;
+
+  gap: 1rem;
+}
+.menu-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  width: 100%;
+  height: 47.8px;
+}
+.acesso-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  width: 100%;
+  height: 47.8px;
+
+  margin: 0px -13px 0px 0px;
+}
+.logo-box {
+  grid-area: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+
+  max-width: 174px;
+  height: 80px;
+
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header-titulos {
+  width: 100%;
+  height: auto;
+
+  margin: 0;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  grid-area: bottom;
+}
+
+.header-titulos ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 45px;
+}
+
+.header-titulos a {
+  padding: 10px 12px;
+  width: auto;
+}
+
+.g1-title {
+  margin: 0.5px 0px 0px -13px;
+}
+.giga-globo {
+  margin: 0.5px -13px 0 0;
+}
+
+@media (max-width: 814px) {
+  .container {
+    margin: 0;
+  }
+}
+@media (max-width: 785px) {
+  .container {
+    margin: 0;
+    padding: 0px 18px;
+  }
+  .header-titulos a {
+    padding: 10px 4px;
+  }
+  .g1-title {
+    margin: 0.5px 0px 0px -6px;
+  }
+  .giga-globo {
+    margin: 0.5px -6.5px 0 0;
+  }
+}
+
+@media (max-width: 639px) {
+  .container {
+    height: 104px;
+  }
+  .logo-box {
+    height: 60px;
+  }
+  .o-valor-title,
+  .cartola-title,
+  .quem-title,
+  .receitas,
+  .giga-globo {
+    display: none;
+  }
+
+  .g1-title {
+    order: -1;
+  }
+  .ge-title {
+    order: -1;
+  }
+  .gshow-title {
+    order: -1;
+  }
+  .globoplay-title {
+    order: -1;
+  }
+
+  .oglobo-title {
+    order: 1;
+  }
+}
