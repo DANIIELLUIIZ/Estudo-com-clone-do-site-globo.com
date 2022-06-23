@@ -3,6 +3,12 @@
   padding: 0;
   font-family: sans-serif;
 }
+
+:root {
+  --color-0: blue;
+  --color-1: rgb(245 246 247);
+  --color-2: ; /*deu sono e não terminei */
+}
 a,
 li {
   list-style: none;
@@ -31,13 +37,16 @@ li {
     'left center right'
     'bottom bottom bottom';
 }
-
+.separador {
+  width: 1px;
+  height: 45px;
+  background: var(--color-1);
+}
 .menu-box,
 .acesso-box {
   display: flex;
   align-items: center;
   font-size: 14px;
-  align-items: center;
 
   gap: 1rem;
 }
@@ -48,6 +57,25 @@ li {
 
   width: 100%;
   height: 47.8px;
+
+  gap: 22px;
+}
+
+.menu-header {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.assine-header {
+  display: flex;
+  align-items: center;
+}
+
+.menu-header svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--color-0);
 }
 .acesso-box {
   display: flex;
@@ -56,8 +84,32 @@ li {
 
   width: 100%;
   height: 47.8px;
+  gap: 25px;
 
   margin: 0px -13px 0px 0px;
+}
+
+.account-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.account-header svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--color-0);
+}
+
+.search-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-header svg {
+  width: 22px;
+  height: 22px;
+  fill: var(--color-0);
 }
 .logo-box {
   grid-area: center;
@@ -73,6 +125,10 @@ li {
   font-weight: bold;
 }
 
+.logo svg {
+  height: 36px;
+  transition: 1s;
+}
 .header-titulos {
   width: 100%;
   height: auto;
@@ -82,6 +138,8 @@ li {
   font-size: 16px;
   font-weight: bold;
 
+  border-bottom: solid 2px var(--color-1);
+  border-top: solid 2px var(--color-1);
   grid-area: bottom;
 }
 
@@ -105,7 +163,39 @@ li {
 .giga-globo {
   margin: 0.5px -13px 0 0;
 }
+@media (max-width: 1024px) {
+  .container {
+    display: grid;
+    grid-template-columns: 40px 174px auto;
+    margin: 0;
+    padding: 0 36px;
+  }
 
+  .menu-box {
+    width: 20px;
+    grid-area: left;
+  }
+  .menu-box .separador {
+    display: none;
+  }
+  .menu-box p {
+    display: none;
+  }
+
+  .acesso-box {
+    grid-area: right;
+    gap: 15px;
+  }
+  .assine-header p {
+    display: none;
+  }
+  .account-header p {
+    display: none;
+  }
+  .search-header p {
+    display: none;
+  }
+}
 @media (max-width: 814px) {
   .container {
     margin: 0;
@@ -116,6 +206,7 @@ li {
     margin: 0;
     padding: 0px 18px;
   }
+
   .header-titulos a {
     padding: 10px 4px;
   }
@@ -130,9 +221,17 @@ li {
 @media (max-width: 639px) {
   .container {
     height: 104px;
+    grid-template-columns: 33px 150px auto;
   }
   .logo-box {
+    display: flex;
+    flex-direction: start;
     height: 60px;
+  }
+  .logo svg {
+    height: 30px;
+    transition: 1s;
+    width: auto;
   }
   .o-valor-title,
   .cartola-title,
