@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT-BR">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,14 +7,15 @@
     <link rel="stylesheet" href="responsive.css" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Globo.com</title>
   </head>
 
   <body>
+    <div id="background-que-fecha-o-menu"></div>
     <header id="header-container">
       <div class="container">
         <div class="menu-box">
-          <div class="menu-header">
+          <div id="menu-header">
             <svg
               version="1.1"
               id="Layer_1"
@@ -57,10 +58,10 @@
               <g></g>
               <g></g>
             </svg>
-            <a href="">Menu</a>
+            <p>Menu</p>
           </div>
           <span class="separador"></span>
-          <div class="assine-header"><a href="">Assine</a></div>
+          <div class="assine-header"><a href="#">Assine</a></div>
         </div>
         <div class="logo-box">
           <div class="logo">
@@ -185,6 +186,13 @@
         </nav>
       </div>
       <div id="menu-cascata">
+        <div class="container-cascata">
+          <img src="./image/icon/user-icon.svg" />
+          <div class="login-cascata">
+            <h3>Acesse sua conta</h3>
+            <p>ou cadastre-se grátis</p>
+          </div>
+        </div>
         <ul id="nav-menu-cascata">
           <li class="cascata-title">
             <img src="./image/logos-titulos/g1.svg" /><a href="#"> G1</a>
@@ -226,4 +234,5 @@
       </div>
     </header>
   </body>
+  <script src="./index.js"></script>
 </html>

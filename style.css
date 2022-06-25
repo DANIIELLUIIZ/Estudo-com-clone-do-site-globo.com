@@ -66,12 +66,13 @@ li {
   gap: 10px;
 }
 
-.menu-header {
+#menu-header {
   display: flex;
   cursor: pointer;
   gap: 14px;
   align-items: center;
   height: 100%;
+
   padding: 0px 0px 0px -13px;
 }
 
@@ -89,7 +90,7 @@ li {
   margin-left: 9px;
 }
 
-.menu-header svg {
+#menu-header svg {
   width: 18px;
   height: 18px;
   fill: var(--color-0);
@@ -247,7 +248,7 @@ li {
   .menu-box .separador {
     display: none;
   }
-  .menu-box a {
+  .menu-box p {
     display: none;
   }
 
@@ -333,31 +334,123 @@ li {
 }
 
 #menu-cascata {
+  position: absolute;
+  overflow-y: scroll;
+  overflow-x: hidden;
   width: 272px;
   height: 100%;
 
+  top: 0;
+  left: -272px;
+
   background-color: #fff;
+  transition: 0.8s;
+
+  z-index: 1000;
+}
+#menu-cascata.active-menu {
+  left: 0;
 }
 
-#nav-menu-cascata a {
-  font-size: 18px;
-  margin-left: 0.5rem;
+.container-cascata {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  width: 244px;
+
+  padding-left: 0.5rem;
 }
-.cascata-title img {
+#background-que-fecha-o-menu {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  transition: 0.2s;
+  z-index: -100;
+
+  background-color: transparent;
+}
+#background-que-fecha-o-menu.fechar-menu-cascata {
+  position: absolute;
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  transition: 0.5s;
+  opacity: 60%;
+
+  z-index: 999;
+
+  background-color: black;
+}
+.container-cascata img {
   width: 40px;
   height: 40px;
+
+  margin-left: 0.5rem;
+}
+.login-cascata {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 80px;
+  width: 180px;
+
+  margin-left: -1rem;
+}
+.login-cascata h3 {
+  font-size: 16px;
+  font-weight: 700;
+
+  color: rgb(47 49 52);
+}
+.login-cascata p {
+  font-size: 12px;
+  font-weight: bold;
+
+  color: rgb(110 114 122);
+}
+
+#nav-menu-cascata {
+  position: relative;
+
+  top: 1rem;
+}
+#nav-menu-cascata a {
+  width: 160px;
+
+  margin-left: 0.9rem;
+
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(47 49 52);
+}
+
+#nav-menu-cascata a:hover {
+  color: rgb(110 114 122);
 }
 
 .cascata-title {
+  width: 40px;
+  height: 40px;
+}
+.cascata-title img {
+  width: 35px;
+  height: 35px;
+
+  margin-top: 6px;
+}
+
+.cascata-title {
+  display: flex;
+  align-items: center;
+
   width: 244px;
   height: 44px;
 
-  display: flex;
-  align-items: center;
-
   padding-left: 1rem;
-}
-.cascata-title a {
-  display: flex;
-  align-items: center;
 }
