@@ -7,7 +7,17 @@
 :root {
   --color-0: blue;
   --color-1: rgb(245 246 247);
-  --color-2: ; /*deu sono e não terminei */
+  --color-1-1: rgb(235 237 239);
+  --color-2: rgb(196 23 12);
+  --color-3: rgb(30 76 154);
+  --color-4: rgb(0 103 103);
+  --color-5: rgb(6 170 72);
+  --color-6: rgb(255 116 0);
+  --color-7: rgb(251 2 52);
+  --color-8: rgb(255 103 0);
+  --color-9: rgb(51 51 51);
+  --color-10: rgb(165 20 125);
+  --color-11: rgb(0 196 162);
 }
 a,
 li {
@@ -36,19 +46,15 @@ li {
   grid-template-areas:
     'left center right'
     'bottom bottom bottom';
+
+  grid-template-columns: 537px 174px 550px;
 }
-.separador {
-  width: 1px;
-  height: 45px;
-  background: var(--color-1);
-}
+
 .menu-box,
 .acesso-box {
   display: flex;
   align-items: center;
   font-size: 14px;
-
-  gap: 1rem;
 }
 .menu-box {
   display: flex;
@@ -57,19 +63,30 @@ li {
 
   width: 100%;
   height: 47.8px;
-
-  gap: 22px;
+  gap: 10px;
 }
 
 .menu-header {
   display: flex;
+  cursor: pointer;
   gap: 14px;
   align-items: center;
+  height: 100%;
+  padding: 0px 0px 0px -13px;
 }
 
 .assine-header {
   display: flex;
+  cursor: pointer;
   align-items: center;
+  height: 100%;
+  width: 80px;
+  border-left: 1px solid var(--color-1-1);
+}
+
+.assine-header a {
+  padding: 15px;
+  margin-left: 9px;
 }
 
 .menu-header svg {
@@ -84,15 +101,17 @@ li {
 
   width: 100%;
   height: 47.8px;
-  gap: 25px;
+  gap: 15px;
 
   margin: 0px -13px 0px 0px;
 }
 
 .account-header {
   display: flex;
+  cursor: pointer;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  margin-right: -8px;
 }
 .account-header svg {
   width: 20px;
@@ -102,8 +121,12 @@ li {
 
 .search-header {
   display: flex;
+  cursor: pointer;
   align-items: center;
-  gap: 10px;
+  gap: 1px;
+
+  height: 100%;
+  border-left: 1px solid var(--color-1-1);
 }
 
 .search-header svg {
@@ -111,29 +134,32 @@ li {
   height: 22px;
   fill: var(--color-0);
 }
+
+.search-header a {
+  padding: 15px;
+  margin-left: 7px;
+}
 .logo-box {
   grid-area: center;
   display: flex;
   align-items: center;
-  justify-content: center;
-  justify-self: center;
 
-  max-width: 174px;
+  max-width: 175px;
   height: 80px;
 
-  font-size: 25px;
-  font-weight: bold;
-}
-
-.logo svg {
-  height: 36px;
   transition: 1s;
 }
+
+.logo path {
+  height: 60px;
+  width: 150px;
+  transition: 1s;
+  cursor: pointer;
+}
 .header-titulos {
+  flex-direction: column;
   width: 100%;
   height: auto;
-
-  margin: 0;
 
   font-size: 16px;
   font-weight: bold;
@@ -156,6 +182,43 @@ li {
   padding: 10px 12px;
   width: auto;
 }
+.g1-title a {
+  color: var(--color-2);
+}
+
+.o-globo-title a {
+  color: var(--color-3);
+}
+.o-valor-title a {
+  color: var(--color-4);
+}
+
+.ge-title a {
+  color: var(--color-5);
+}
+
+.cartola-title a {
+  color: var(--color-6);
+}
+
+.globoplay-title a {
+  color: var(--color-7);
+}
+
+.gshow-title a {
+  color: var(--color-8);
+}
+
+.quem-title a {
+  color: var(--color-9);
+}
+
+.receitas-title a {
+  color: var(--color-10);
+}
+.giga-globo a {
+  color: var(--color-11);
+}
 
 .g1-title {
   margin: 0.5px 0px 0px -13px;
@@ -163,10 +226,16 @@ li {
 .giga-globo {
   margin: 0.5px -13px 0 0;
 }
+@media (min-width: 1500px) {
+  .container {
+    margin: 0px auto;
+  }
+}
+
 @media (max-width: 1024px) {
   .container {
     display: grid;
-    grid-template-columns: 40px 174px auto;
+    grid-template-columns: 30px 174px auto;
     margin: 0;
     padding: 0 36px;
   }
@@ -178,7 +247,7 @@ li {
   .menu-box .separador {
     display: none;
   }
-  .menu-box p {
+  .menu-box a {
     display: none;
   }
 
@@ -186,13 +255,13 @@ li {
     grid-area: right;
     gap: 15px;
   }
-  .assine-header p {
+  .assine-header a {
     display: none;
   }
-  .account-header p {
+  .account-header a {
     display: none;
   }
-  .search-header p {
+  .search-header a {
     display: none;
   }
 }
@@ -204,11 +273,12 @@ li {
 @media (max-width: 785px) {
   .container {
     margin: 0;
-    padding: 0px 18px;
+    padding: 0px 16px;
   }
 
   .header-titulos a {
     padding: 10px 4px;
+    font-size: 16px;
   }
   .g1-title {
     margin: 0.5px 0px 0px -6px;
@@ -226,35 +296,38 @@ li {
   .logo-box {
     display: flex;
     flex-direction: start;
-    height: 60px;
+    height: 58px;
   }
   .logo svg {
     height: 30px;
     transition: 1s;
     width: auto;
   }
+  .header-titulos a {
+    padding: 10px 8px;
+  }
   .o-valor-title,
   .cartola-title,
   .quem-title,
-  .receitas,
+  .receitas-title,
   .giga-globo {
     display: none;
   }
 
   .g1-title {
-    order: -1;
+    order: 1;
   }
   .ge-title {
-    order: -1;
+    order: 2;
   }
   .gshow-title {
-    order: -1;
+    order: 3;
   }
   .globoplay-title {
-    order: -1;
+    order: 4;
   }
 
-  .oglobo-title {
-    order: 1;
+  .o-globo-title {
+    order: 5;
   }
 }
