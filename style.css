@@ -331,3 +331,33 @@ li {
     order: 5;
   }
 }
+
+#menu-cascata {
+  width: 272px;
+  height: 100%;
+
+  background-color: #fff;
+}
+
+#nav-menu-cascata a {
+  font-size: 18px;
+  margin-left: 0.5rem;
+}
+.cascata-title img {
+  width: 40px;
+  height: 40px;
+}
+
+.cascata-title {
+  width: 244px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+
+  padding-left: 1rem;
+}
+.cascata-title a {
+  display: flex;
+  align-items: center;
+}
