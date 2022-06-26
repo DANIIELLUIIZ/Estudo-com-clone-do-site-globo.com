@@ -1,0 +1,27 @@
+/*@media (max-width: 922px) {
+  .item-1,
+  .item-3 {
+    width: calc(350px - 100px);
+  }
+}
+
+@media (max-width: 725px) {
+  .item-1,
+  .item-3 {
+    width: calc(250px - 50px);
+  }
+}
+
+@media (max-width: 625px) {
+  .item-1,
+  .item-3 {
+    width: calc(200px - 50px);
+  }
+}
+
+@media (max-width: 525px) {
+  .item-1,
+  .item-3 {
+    width: calc(150px - 50px);
+  }
+}
