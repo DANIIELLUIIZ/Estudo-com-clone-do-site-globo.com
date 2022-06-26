@@ -1,18 +1,19 @@
-const btnMenu = document.getElementById('menu-header')
-const menuCascata = document.getElementById('menu-cascata')
-const backGroundCloseMenu = document.getElementById(
-  'background-que-fecha-o-menu'
-)
+const btnMenu = document.querySelector('#menu-header')
 
-function abrirMenu() {
+function abrirMenuCascata() {
+  const menuCascata = document.querySelector('#menu-cascata')
+  const bGMenuCascata = document.querySelector('#background-menu-cascata')
+
   menuCascata.classList.add('active-menu')
-  backGroundCloseMenu.classList.add('fechar-menu-cascata')
+  bGMenuCascata.classList.add('menu-cascata-active')
+
+  document.addEventListener('mousedown', event => {
+    if (menuCascata.contains(event.target)) {
+    } else {
+      menuCascata.classList.remove('active-menu')
+      bGMenuCascata.classList.remove('menu-cascata-active')
+    }
+  })
 }
 
-function fecharMenu() {
-  menuCascata.classList.remove('active-menu')
-  backGroundCloseMenu.classList.remove('fechar-menu-cascata')
-}
-
-backGroundCloseMenu.addEventListener('click', fecharMenu)
-btnMenu.addEventListener('click', abrirMenu)
+btnMenu.addEventListener('click', abrirMenuCascata)
