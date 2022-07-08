@@ -14,7 +14,7 @@
     <div id="background-menu-cascata"></div>
     <header id="header-container">
       <div class="container">
-        <div class="menu-box">
+        <div id="menu-box">
           <div id="menu-header">
             <svg
               version="1.1"
@@ -103,8 +103,8 @@
             </svg>
           </div>
         </div>
-        <div class="acesso-box">
-          <div class="account-header">
+        <div id="acesso-box">
+          <div id="account-header">
             <a href="">Conta Globo </a>
             <svg
               width="30px"
@@ -131,7 +131,7 @@
             </svg>
           </div>
           <span class="separador"></span>
-          <div class="search-header">
+          <div id="search-header">
             <a href="">Busca</a>
             <svg
               version="1.1"
@@ -168,6 +168,15 @@
               <g></g>
             </svg>
           </div>
+
+          <div>
+            <input
+              id="search-expanded"
+              type="text"
+              placeholder="Encontre na globo.com"
+            />
+          </div>
+          <button id="close-search">X</button>
         </div>
 
         <nav class="header-titulos">
@@ -234,5 +243,5 @@
       </div>
     </header>
   </body>
-  <script src="./index.js"></script>
+  <script src="./script.js"></script>
 </html>
